@@ -18,8 +18,9 @@ document.getElementById('cateringForm').onsubmit = function(e) {
     const numberInputs = this.querySelectorAll('input[type="number"]');
     let isValid = true;
     let hasOrders = false;
+    let orderDetails = [];
     
-    // Check each input
+    // Check each input and collect order details
     numberInputs.forEach(input => {
         const value = parseInt(input.value) || 0;
         if (input.id === 'brisket') {
@@ -37,7 +38,10 @@ document.getElementById('cateringForm').onsubmit = function(e) {
                 input.setCustomValidity('');
             }
         }
-        if (value > 0) hasOrders = true;
+        if (value > 0) {
+            hasOrders = true;
+            orderDetails.push(`${input.previousElementSibling.textContent}: ${value} people`);
+        }
     });
     
     if (!isValid) {
@@ -49,8 +53,42 @@ document.getElementById('cateringForm').onsubmit = function(e) {
         alert('Please select at least one menu item.');
         return;
     }
+
+    // Get contact info
+    const name = document.getElementById('name').value;
+    const email = document.getElementById('email').value;
+    const phone = document.getElementById('phone').value;
+    const eventDate = document.getElementById('eventDate').value;
+    const notes = document.getElementById('notes').value;
+
+    // Construct email body
+    const emailBody = `
+New Catering Order:
+
+Contact Information:
+------------------
+Name: ${name}
+Email: ${email}
+Phone: ${phone}
+Event Date: ${eventDate}
+
+Order Details:
+-------------
+${orderDetails.join('\n')}
+
+Additional Notes:
+---------------
+${notes}
+    `.trim();
+
+    // Create mailto link
+    const mailtoLink = `mailto:catering@moredanmeat.com?subject=New Catering Order from ${name}&body=${encodeURIComponent(emailBody)}`;
     
-    // If valid, submit the form
-    alert('Thank you for your order! We will contact you soon to confirm the details.');
+    // Open email client
+    window.location.href = mailtoLink;
+    
+    // Show confirmation and reset form
+    alert('Thank you for your order! Your email client will open to send the order details.');
     document.getElementById('orderForm').style.display = 'none';
+    e.target.reset();
 } 
