@@ -13,14 +13,14 @@
 
 @font-face {
     font-family: 'Intro Rust';
-    src: url('IntroRustG-Base2Line.otf') format('opentype');
+    src: url('fonts/IntroRustG-Base2Line.otf') format('opentype');
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'Regular Brush';
-    src: url('Regular Brush.ttf') format('truetype');
+    src: url('fonts/Regular Brush.ttf') format('truetype');
 }
 
 body {
@@ -51,7 +51,7 @@ body {
 /* Hero Section */
 .hero {
     height: 100vh;
-    background: url('hero.png') center/cover no-repeat fixed;  /* Added 'fixed' for parallax */
+    background: url('img/hero.png') center/cover no-repeat fixed;  /* Added 'fixed' for parallax */
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -146,7 +146,7 @@ body {
     left: 0;
     right: 0;
     bottom: 0;
-    background: url('texture.png') repeat;
+    background: url('img/texture.png') repeat;
     z-index: -1;
 }
 
@@ -557,7 +557,7 @@ input[type="number"]:invalid {
     align-items: center;
     justify-content: center;
     text-align: center;
-    background: url('texture.png') repeat;
+    background: url('img/texture.png') repeat;
 }
 
 .confirmation-content {
