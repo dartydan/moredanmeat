@@ -636,4 +636,63 @@ input[type="number"]:invalid {
     margin-bottom: 1rem;
     font-style: italic;
     line-height: 1.4;
+}
+
+.process-section {
+    background-color: var(--yellow);
+    padding: 4rem 2rem;
+    color: var(--dark-gray);
+}
+
+.process-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.process-content h2 {
+    font-size: 3.5rem;  /* Match menu heading size */
+    text-align: center;
+    color: var(--dark-gray);
+    margin-bottom: 1rem;
+}
+
+.process-text {
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.8;
+}
+
+.process-text p {
+    margin-bottom: 1.5rem;
+    font-size: 1.1rem;
+}
+
+.process-text p:last-child {
+    margin-bottom: 0;
+}
+
+@media screen and (max-width: 768px) {
+    .process-section {
+        padding: 3rem 1.5rem;
+    }
+    
+    .process-text p {
+        font-size: 1rem;
+        line-height: 1.6;
+    }
+
+    .process-content h2 {
+        font-size: 2.5rem;  /* Match menu heading mobile size */
+    }
+}
+
+.process-section .cta-button {
+    margin-top: 2rem;
+    background-color: var(--dark-gray);
+    color: var(--yellow);
+}
+
+.process-section .cta-button:hover {
+    transform: scale(1.05);
 } 
