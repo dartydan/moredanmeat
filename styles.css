@@ -695,4 +695,20 @@ input[type="number"]:invalid {
 
 .process-section .cta-button:hover {
     transform: scale(1.05);
+}
+
+.menu-download {
+    max-width: 1200px;
+    margin: 3rem auto 0;
+    text-align: center;
+    padding: 0 2rem;
+}
+
+.menu-download .cta-button {
+    background-color: var(--yellow);
+    color: var(--dark-gray);
+}
+
+.menu-download .cta-button:hover {
+    transform: scale(1.05);
 } 
