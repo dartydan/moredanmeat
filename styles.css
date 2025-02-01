@@ -547,4 +547,93 @@ input[type="number"]:invalid {
 
 .wide-category h3 {
     color: var(--white);  /* Change from yellow to white */
+}
+
+.confirmation-page {
+    min-height: 100vh;
+    padding: 4rem 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: url('texture.png') repeat;
+}
+
+.confirmation-content {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background: rgba(11, 11, 11, 0.85);
+    border-radius: 8px;
+    border: 1px solid var(--yellow);
+}
+
+.confirmation-content p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    color: var(--white);
+}
+
+#orderSummary {
+    text-align: left;
+    margin: 2rem 0;
+    padding: 1rem;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 8px;
+}
+
+#orderSummary h2 {
+    color: var(--yellow);
+    margin-bottom: 1rem;
+}
+
+#orderSummary div {
+    margin-bottom: 0.5rem;
+    color: var(--white);
+}
+
+.total-section {
+    border: 1px solid rgba(255, 207, 0, 0.2);
+    padding: 1.5rem;
+    border-radius: 8px;
+    background: rgba(255, 207, 0, 0.05);
+}
+
+.total-breakdown {
+    margin-top: 1rem;
+}
+
+.total-breakdown > div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 0;
+    color: var(--white);
+}
+
+.total-breakdown .total {
+    border-top: 1px solid rgba(255, 207, 0, 0.2);
+    margin-top: 0.5rem;
+    padding-top: 1rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.estimate-disclaimer {
+    color: var(--white);
+    font-size: 0.9rem;
+    opacity: 0.8;
+    margin: 0.5rem 0 1rem;
+    font-style: italic;
+}
+
+.submit-disclaimer {
+    text-align: center;
+    color: var(--white);
+    font-size: 0.9rem;
+    opacity: 0.8;
+    margin-bottom: 1rem;
+    font-style: italic;
+    line-height: 1.4;
 } 
