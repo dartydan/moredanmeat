@@ -19,7 +19,116 @@
                     Meat
                 </h1>
             </div>
+            <div class="paint-stroke-button">
+                <a href="#" class="cta-button rust-font" onclick="document.getElementById('orderForm').style.display='block'">Start Your Order</a>
+            </div>
         </section>
+
+        <!-- Add this after the hero section -->
+        <div id="orderForm" class="popup-overlay">
+            <div class="popup-content">
+                <div class="popup-header">
+                    <h2 class="rust-font">Start Your Order</h2>
+                    <button class="close-button">&times;</button>
+                </div>
+                <p class="form-note poppins-font">Note: Minimum $100 delivery fee. Dietary accomodations available. All utensils and supplies provided. Full-service available. Deposit required. Final payment due prior to delivery. Minimum of 10 days notice required. Questions? Call (765) 280-0057</p>
+                <form id="cateringForm" class="order-form poppins-font">
+                    <div class="form-section">
+                        <h3 class="rust-font">Meats</h3>
+                        <div class="menu-item-input">
+                            <label for="pulledPork">Pulled Pork ($10/person)</label>
+                            <input type="number" id="pulledPork" name="pulledPork" min="10" step="10" placeholder="Min. 10 people">
+                        </div>
+                        <div class="menu-item-input">
+                            <label for="pulledChicken">Pulled Chicken ($9/person)</label>
+                            <input type="number" id="pulledChicken" name="pulledChicken" min="10" step="10" placeholder="Min. 10 people">
+                        </div>
+                        <div class="menu-item-input">
+                            <label for="ribs">Ribs ($13/person)</label>
+                            <input type="number" id="ribs" name="ribs" min="10" step="10" placeholder="Min. 10 people">
+                        </div>
+                        <div class="menu-item-input">
+                            <label for="sausage">Sausage ($9/person)</label>
+                            <input type="number" id="sausage" name="sausage" min="10" step="10" placeholder="Min. 10 people">
+                        </div>
+                        <div class="menu-item-input">
+                            <label for="brisket">Brisket ($15/person)</label>
+                            <input type="number" id="brisket" name="brisket" min="20" step="10" placeholder="Min. 20 people">
+                        </div>
+                    </div>
+
+                    <div class="form-section">
+                        <h3 class="rust-font">Sides</h3>
+                        <div class="menu-item-input">
+                            <label for="macCheese">Mac n Cheese ($3/person)</label>
+                            <input type="number" id="macCheese" name="macCheese" min="10" step="10" placeholder="Min. 10 people">
+                        </div>
+                        <div class="menu-item-input">
+                            <label for="quesoDip">Queso Dip ($4/person)</label>
+                            <input type="number" id="quesoDip" name="quesoDip" min="10" step="10" placeholder="Min. 10 people">
+                        </div>
+                        <div class="menu-item-input">
+                            <label for="greenBeans">Green Beans ($3/person)</label>
+                            <input type="number" id="greenBeans" name="greenBeans" min="10" step="10" placeholder="Min. 10 people">
+                        </div>
+                        <div class="menu-item-input">
+                            <label for="bakedBeans">Baked Beans ($3/person)</label>
+                            <input type="number" id="bakedBeans" name="bakedBeans" min="10" step="10" placeholder="Min. 10 people">
+                        </div>
+                        <div class="menu-item-input">
+                            <label for="cornCasserole">Corn Casserole ($4/person)</label>
+                            <input type="number" id="cornCasserole" name="cornCasserole" min="10" step="10" placeholder="Min. 10 people">
+                        </div>
+                    </div>
+
+                    <div class="form-section">
+                        <h3 class="rust-font">Drinks</h3>
+                        <div class="menu-item-input">
+                            <label for="sweetTea">Sweet Tea ($4/person)</label>
+                            <input type="number" id="sweetTea" name="sweetTea" min="10" step="10" placeholder="Min. 10 people">
+                        </div>
+                        <div class="menu-item-input">
+                            <label for="unsweetTea">Unsweet Tea ($4/person)</label>
+                            <input type="number" id="unsweetTea" name="unsweetTea" min="10" step="10" placeholder="Min. 10 people">
+                        </div>
+                        <div class="menu-item-input">
+                            <label for="lemonade">Lemonade ($4/person)</label>
+                            <input type="number" id="lemonade" name="lemonade" min="10" step="10" placeholder="Min. 10 people">
+                        </div>
+                        <div class="menu-item-input">
+                            <label for="water">Water ($1/person)</label>
+                            <input type="number" id="water" name="water" min="10" step="10" placeholder="Min. 10 people">
+                        </div>
+                    </div>
+
+                    <div class="form-section">
+                        <h3 class="rust-font">Contact Information</h3>
+                        <div class="contact-input">
+                            <label for="name">Name *</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="contact-input">
+                            <label for="email">Email *</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="contact-input">
+                            <label for="phone">Phone *</label>
+                            <input type="tel" id="phone" name="phone" required>
+                        </div>
+                        <div class="contact-input">
+                            <label for="eventDate">Event Date *</label>
+                            <input type="date" id="eventDate" name="eventDate" required>
+                        </div>
+                        <div class="contact-input">
+                            <label for="notes">Additional Notes</label>
+                            <textarea id="notes" name="notes" rows="3"></textarea>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="submit-button rust-font">Submit Order</button>
+                </form>
+            </div>
+        </div>
 
         <section id="menu" class="menu-section">
             <div class="section-header">
@@ -88,28 +197,83 @@
 
                 <div class="menu-category">
                     <div class="paint-stroke-medium">
-                        <h3 class="rust-font">Extras</h3>
+                        <h3 class="rust-font">Drinks</h3>
                     </div>
                     <div class="menu-list">
                         <div class="menu-item">
-                            <span class="item-name rust-font">BBQ Sauce</span>
-                            <span class="price rust-font">$2</span>
+                            <span class="item-name rust-font">Sweet Tea</span>
+                            <span class="price rust-font">$4</span>
                         </div>
                         <div class="menu-item">
-                            <span class="item-name rust-font">Dipping Sauce</span>
-                            <span class="price rust-font">$2</span>
+                            <span class="item-name rust-font">Unsweet Tea</span>
+                            <span class="price rust-font">$4</span>
                         </div>
                         <div class="menu-item">
-                            <span class="item-name rust-font">Hot Sauce</span>
-                            <span class="price rust-font">$1-2</span>
-                        </div>
-                        <div class="menu-item">
-                            <span class="item-name rust-font">Tea/Lemonade</span>
+                            <span class="item-name rust-font">Lemonade</span>
                             <span class="price rust-font">$4</span>
                         </div>
                         <div class="menu-item">
                             <span class="item-name rust-font">Water</span>
                             <span class="price rust-font">$1</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="sauce-row">
+                <div class="menu-category wide-category">
+                    <div class="paint-stroke-medium">
+                        <h3 class="rust-font">Sauces</h3>
+                    </div>
+                    <div class="sauce-columns">
+                        <div class="sauce-column">
+                            <h4 class="sauce-subheading rust-font">BBQ</h4>
+                            <div class="menu-list">
+                                <div class="menu-item">
+                                    <span class="item-name rust-font">Original BBQ</span>
+                                    <span class="price rust-font">$2</span>
+                                </div>
+                                <div class="menu-item">
+                                    <span class="item-name rust-font">Hot BBQ</span>
+                                    <span class="price rust-font">$2</span>
+                                </div>
+                                <div class="menu-item">
+                                    <span class="item-name rust-font">Tangy BBQ</span>
+                                    <span class="price rust-font">$2</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="sauce-column">
+                            <h4 class="sauce-subheading rust-font">Dipping</h4>
+                            <div class="menu-list">
+                                <div class="menu-item">
+                                    <span class="item-name rust-font">Chicken Sauce</span>
+                                    <span class="price rust-font">$2</span>
+                                </div>
+                                <div class="menu-item">
+                                    <span class="item-name rust-font">Creamy Ranch</span>
+                                    <span class="price rust-font">$2</span>
+                                </div>
+                                <div class="menu-item">
+                                    <span class="item-name rust-font">Bleu Cheese</span>
+                                    <span class="price rust-font">$2</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="sauce-column">
+                            <h4 class="sauce-subheading rust-font">Hot</h4>
+                            <div class="menu-list">
+                                <div class="menu-item">
+                                    <span class="item-name rust-font">Classic Hot Sauce</span>
+                                    <span class="price rust-font">$1</span>
+                                </div>
+                                <div class="menu-item">
+                                    <span class="item-name rust-font">Insane Hot Sauce</span>
+                                    <span class="price rust-font">$2</span>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -131,5 +295,8 @@
     <footer class="poppins-font">
         <p>&copy; 2025 More Dan Meat. All rights reserved.</p>
     </footer>
+
+    <!-- Add before closing body tag -->
+    <script src="script.js"></script>
 </body>
 </html> 

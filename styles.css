@@ -98,6 +98,21 @@ body {
     line-height: 1.1;
 }
 
+.cta-button {
+    display: inline-block;
+    padding: 1rem 2rem;
+    background-color: var(--yellow);
+    color: var(--dark-gray);
+    text-decoration: none;
+    border-radius: 4px;
+    font-size: 1.2rem;
+    transition: transform 0.3s ease;
+}
+
+.cta-button:hover {
+    transform: scale(1.05);
+}
+
 /* About Section */
 .about-section {
     padding: 6rem 2rem;
@@ -205,6 +220,20 @@ body {
     font-style: italic;
 }
 
+.menu-subheading {
+    color: var(--yellow);
+    font-size: 1.2rem;
+    margin-top: 1.5rem;
+    margin-bottom: 0.5rem;
+    opacity: 0.9;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.menu-subheading:first-child {
+    margin-top: 0;
+}
+
 /* Contact Section */
 .contact-section {
     padding: 4rem 2rem;  /* Keep consistent padding */
@@ -301,4 +330,221 @@ footer {
     .catering-text {
         font-size: 2.5rem;
     }
+}
+
+.popup-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    z-index: 1000;
+    overflow-y: auto;
+}
+
+.popup-content {
+    background: var(--dark-gray);
+    margin: 2rem auto;
+    padding: 2rem;
+    max-width: 800px;
+    border-radius: 8px;
+    border: 1px solid var(--yellow);
+    position: relative;
+}
+
+.popup-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 2rem;
+    position: relative;
+}
+
+.popup-header h2 {
+    text-align: center;
+}
+
+.close-button {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    color: var(--white);
+    font-size: 2rem;
+    cursor: pointer;
+    padding: 0.5rem;
+}
+
+.close-button:hover {
+    color: var(--yellow);
+}
+
+.order-form {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.form-section {
+    border: 1px solid rgba(255, 207, 0, 0.2);
+    padding: 1.5rem;
+    border-radius: 8px;
+}
+
+.form-section h3 {
+    color: var(--yellow);
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+}
+
+.menu-item-input, .contact-input {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+    gap: 1rem;
+}
+
+.menu-item-input input {
+    width: 120px;
+}
+
+.contact-input {
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.contact-input input, .contact-input textarea {
+    width: 100%;
+}
+
+input, textarea {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 207, 0, 0.2);
+    padding: 0.5rem;
+    border-radius: 4px;
+    color: var(--white);
+}
+
+input:focus, textarea:focus {
+    border-color: var(--yellow);
+    outline: none;
+}
+
+.submit-button {
+    background: var(--yellow);
+    color: var(--dark-gray);
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 4px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.submit-button:hover {
+    transform: scale(1.05);
+}
+
+@media screen and (max-width: 768px) {
+    .popup-content {
+        margin: 1rem;
+        padding: 1rem;
+    }
+
+    .menu-item-input {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .menu-item-input input {
+        width: 100%;
+    }
+}
+
+.form-note {
+    color: var(--yellow);
+    margin-bottom: 2rem;
+    text-align: center;
+    font-size: 0.9rem;
+    opacity: 0.9;
+}
+
+/* Update input styling */
+input[type="number"] {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 207, 0, 0.2);
+    padding: 0.5rem;
+    border-radius: 4px;
+    color: var(--white);
+}
+
+/* Add validation styling */
+input[type="number"]:invalid {
+    border-color: #ff4444;
+}
+
+.sauce-row {
+    margin-top: 2rem;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 2rem;
+}
+
+@media screen and (max-width: 768px) {
+    .sauce-row {
+        margin-top: 1.5rem;
+    }
+}
+
+.wide-category {
+    grid-column: 1 / -1;
+    background: none;  /* Remove background */
+    border: none;      /* Remove border */
+    padding: 0;        /* Remove padding */
+}
+
+.sauce-columns {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin-top: 1.5rem;
+}
+
+.sauce-subheading {
+    color: var(--yellow);
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+    text-align: center;
+    opacity: 0.9;
+}
+
+@media screen and (max-width: 768px) {
+    .sauce-columns {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+}
+
+/* Keep the sauce columns aligned with menu columns */
+.sauce-column {
+    background: rgba(11, 11, 11, 0.85);
+    border-radius: 8px;
+    border: 1px solid rgba(255, 207, 0, 0.2);
+    backdrop-filter: blur(5px);
+    padding: 1.5rem;
+}
+
+/* Remove any extra spacing from the sauce section title */
+.wide-category .paint-stroke-medium {
+    margin-bottom: 0;
+}
+
+.wide-category h3 {
+    color: var(--white);  /* Change from yellow to white */
 } 
