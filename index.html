@@ -5,60 +5,131 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>More Dan Meat - Premium Smoked Meats</title>
     <link rel="stylesheet" href="styles.css">
+    <!-- Add font links -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <!-- You'll need to ensure you have licenses for Intro Rust and Regular Brush fonts -->
 </head>
 <body>
-    <header>
-        <nav class="nav-container">
-            <div class="logo">More Dan Meat</div>
-            <div class="nav-links">
-                <a href="#menu">Menu</a>
-                <a href="#about">About</a>
-                <a href="#contact">Contact</a>
-            </div>
-        </nav>
-    </header>
-
     <main>
         <section class="hero">
-            <h1>More Dan Meat</h1>
-            <p class="tagline">"I want more Dan meat"</p>
-            <a href="#menu" class="cta-button">View Our Menu</a>
+            <p class="catering-text brush-font">catering</p>
+            <div class="paint-stroke-large">
+                <h1 class="rust-font">
+                    More Dan<br>
+                    Meat
+                </h1>
+            </div>
         </section>
 
         <section id="menu" class="menu-section">
-            <h2>Our Smoked Specialties</h2>
-            <div class="menu-grid">
-                <div class="menu-item">
-                    <h3>Smoked Brisket</h3>
-                    <p>14-hour slow-smoked Texas-style brisket</p>
+            <div class="section-header">
+                <div class="paint-stroke-medium">
+                    <h2 class="rust-font">Our Menu</h2>
                 </div>
-                <div class="menu-item">
-                    <h3>Pulled Pork</h3>
-                    <p>Tender pulled pork with house-made BBQ sauce</p>
+                <p class="menu-subtitle poppins-font">All prices are per person. Min 10 people per menu item.</p>
+            </div>
+            
+            <div class="menu-columns">
+                <div class="menu-category">
+                    <div class="paint-stroke-medium">
+                        <h3 class="rust-font">Meats</h3>
+                    </div>
+                    <div class="menu-list">
+                        <div class="menu-item">
+                            <span class="item-name rust-font">Pulled Pork</span>
+                            <span class="price rust-font">$10</span>
+                        </div>
+                        <div class="menu-item">
+                            <span class="item-name rust-font">Pulled Chicken</span>
+                            <span class="price rust-font">$9</span>
+                        </div>
+                        <div class="menu-item">
+                            <span class="item-name rust-font">Ribs</span>
+                            <span class="price rust-font">$13</span>
+                        </div>
+                        <div class="menu-item">
+                            <span class="item-name rust-font">Sausage</span>
+                            <span class="price rust-font">$9</span>
+                        </div>
+                        <div class="menu-item">
+                            <span class="item-name rust-font">Brisket</span>
+                            <span class="price rust-font">$15</span>
+                        </div>
+                    </div>
                 </div>
-                <div class="menu-item">
-                    <h3>Smoked Ribs</h3>
-                    <p>Fall-off-the-bone tender pork ribs</p>
+
+                <div class="menu-category">
+                    <div class="paint-stroke-medium">
+                        <h3 class="rust-font">Sides</h3>
+                    </div>
+                    <div class="menu-list">
+                        <div class="menu-item">
+                            <span class="item-name rust-font">Mac n Cheese</span>
+                            <span class="price rust-font">$3</span>
+                        </div>
+                        <div class="menu-item">
+                            <span class="item-name rust-font">Queso Dip</span>
+                            <span class="price rust-font">$4</span>
+                        </div>
+                        <div class="menu-item">
+                            <span class="item-name rust-font">Green Beans</span>
+                            <span class="price rust-font">$3</span>
+                        </div>
+                        <div class="menu-item">
+                            <span class="item-name rust-font">Baked Beans</span>
+                            <span class="price rust-font">$3</span>
+                        </div>
+                        <div class="menu-item">
+                            <span class="item-name rust-font">Corn Casserole</span>
+                            <span class="price rust-font">$4</span>
+                        </div>
+                    </div>
                 </div>
-                <div class="menu-item">
-                    <h3>Smoked Chicken</h3>
-                    <p>Whole chicken with our signature rub</p>
+
+                <div class="menu-category">
+                    <div class="paint-stroke-medium">
+                        <h3 class="rust-font">Extras</h3>
+                    </div>
+                    <div class="menu-list">
+                        <div class="menu-item">
+                            <span class="item-name rust-font">BBQ Sauce</span>
+                            <span class="price rust-font">$2</span>
+                        </div>
+                        <div class="menu-item">
+                            <span class="item-name rust-font">Dipping Sauce</span>
+                            <span class="price rust-font">$2</span>
+                        </div>
+                        <div class="menu-item">
+                            <span class="item-name rust-font">Hot Sauce</span>
+                            <span class="price rust-font">$1-2</span>
+                        </div>
+                        <div class="menu-item">
+                            <span class="item-name rust-font">Tea/Lemonade</span>
+                            <span class="price rust-font">$4</span>
+                        </div>
+                        <div class="menu-item">
+                            <span class="item-name rust-font">Water</span>
+                            <span class="price rust-font">$1</span>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
 
         <section id="contact" class="contact-section">
-            <h2>Contact Us</h2>
-            <div class="contact-info">
-                <p>📞 (555) 123-4567</p>
-                <p>📍 123 Smoke Street, Meatville, ST 12345</p>
-                <p>📧 info@moredanmeat.com</p>
+            <div class="paint-stroke-medium">
+                <h2 class="rust-font">Contact Us</h2>
+            </div>
+            <div class="contact-info poppins-font">
+                <p>📍 Muncie, IN</p>
+                <p> (765) 280-0057</p>
+                <p>📧 catering@moredanmeat.com</p>
             </div>
         </section>
     </main>
 
-    <footer>
-        <p>&copy; 2024 More Dan Meat. All rights reserved.</p>
+    <footer class="poppins-font">
+        <p>&copy; 2025 More Dan Meat. All rights reserved.</p>
     </footer>
 </body>
 </html> 
