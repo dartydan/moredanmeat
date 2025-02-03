@@ -262,6 +262,10 @@ footer {
     border-top: 2px solid var(--yellow);
 }
 
+footer p {
+    content: "&copy; 2024 The Piggy Place. All rights reserved.";
+}
+
 /* Responsive Design */
 @media screen and (max-width: 768px) {
     .hero h1 {

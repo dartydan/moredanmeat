@@ -98,7 +98,7 @@ ${notes}
     localStorage.setItem('orderData', JSON.stringify(orderData));
 
     // Create mailto link with the complete email body
-    const mailtoLink = `mailto:catering@moredanmeat.com?subject=New Catering Quote Request from ${name}&body=${encodeURIComponent(emailBody)}`;
+    const mailtoLink = `mailto:catering@piggy.place?subject=New Catering Quote Request from ${name}&body=${encodeURIComponent(emailBody)}`;
     
     // Open email client and wait for user interaction
     const emailWindow = window.open(mailtoLink);
